@@ -1,4 +1,6 @@
+import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(const MyApp());
 
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
               TitleSection(
               name: 'Kadek Agus Ary Mahendra Putra',
               location: 'Bali, Jimbaran')
+              ButtonSection(),
               ],
           ),
         ),
@@ -126,7 +129,7 @@ class ButtonWithText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
 // ···
     );
   }
