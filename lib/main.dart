@@ -18,7 +18,9 @@ class MyApp extends StatelessWidget {
         body: const SingleChildScrollView(
               child: Column(
               children: [
-
+              TitleSection(
+              name: 'Kadek Agus Ary Mahendra Putra',
+              location: 'Bali, Jimbaran')
               ],
           ),
         ),
