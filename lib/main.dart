@@ -2,31 +2,24 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const String appTitle = 'ryBank';
-    return MaterialApp(
-      title: appTitle,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(appTitle),
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'Namer App',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(221, 14, 44, 78)),
         ),
-        body: const SingleChildScrollView(
-              child: Column(
-              children: [
-              TitleSection(
-              name: 'Kadek Agus Ary Mahendra Putra',
-              location: 'Bali, Jimbaran')
-              ButtonSection(),
-              ],
-          ),
-        ),
+        home: MyHomePage(),
       ),
     );
   }
